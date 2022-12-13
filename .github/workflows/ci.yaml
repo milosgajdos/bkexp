@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest ]
-        go: [ '1.14', '1.15', '1.16' ]
+        go: [ '1.19' ]
 
     steps:
 
@@ -58,21 +58,21 @@ jobs:
       run: go test -v ./...
 
   lint:
-    name: Run golangci linter
+    name: Lint Source
     timeout-minutes: 5
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest ]
-        go: [ '1.14', '1.15', '1.16' ]
+        go: [ '1.19' ]
 
     steps:
 
     - name: Check out source code
       uses: actions/checkout@v2
 
-    - name: Run linter
+    - name: Run Linter
       uses: golangci/golangci-lint-action@v2
       with:
-        version: v1.38
+        version: v1.50
