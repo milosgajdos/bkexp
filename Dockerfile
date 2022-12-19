@@ -1,5 +1,5 @@
 # build stage
-FROM --platform=${BUILDPLATFORM} golang:1.19-alpine3.16 AS build
+FROM --platform=${BUILDPLATFORM} golang:1.19-alpine3.17 AS build
 
 RUN apk add --no-cache git build-base ca-certificates
 
