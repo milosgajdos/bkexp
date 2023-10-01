@@ -35,7 +35,7 @@ func main() {
 
 	args := flag.Args()
 	if len(args) < 1 {
-		fmt.Fprintln(os.Stderr, "missing context path")
+		fmt.Fprintln(os.Stderr, "missing build context path")
 		os.Exit(1)
 	}
 	ctxPath := args[0]
