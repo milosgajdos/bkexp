@@ -69,7 +69,7 @@ func main() {
 	}
 
 	if len(nodes) == 0 {
-		fmt.Fprintln(os.Stderr, "no builder nodes found")
+		fmt.Fprintln(os.Stderr, "no buildx builder nodes found")
 		os.Exit(1)
 	}
 
